@@ -1,0 +1,968 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>HEESONG</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="css/set.css" type="text/css" rel="stylesheet">
+    <link href="css/pc.css" type="text/css" rel="stylesheet">
+
+    <style type="text/css">
+        .clock {
+            font-family: tahoma;
+            font-size: 1.1vw;
+            color: black;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+    </style>
+    
+    <script language="javascript">
+        function showClock() {
+            var currentDate = new Date();
+            var divClock = document.getElementById("divClock");
+            var msg = "";
+
+            msg += currentDate.getMinutes() + "분 ";
+            msg += currentDate.getSeconds() + "초 ";
+
+            if (currentDate.getHours() <= 12) {
+                msg = "오전 " + currentDate.getHours() + ":";
+                msg += currentDate.getMinutes();
+            } else if (currentDate.getHours() >= 13) {
+                msg = "오후 " + currentDate.getHours() + ":";
+                msg += currentDate.getMinutes();
+            }
+
+            divClock.innerText = msg;
+
+            setTimeout(showClock, 1000);
+        }
+  
+        
+        
+        
+        
+
+    </script>
+</head>
+
+<body onload="showClock()">
+    <div class="wrap">
+
+        <!-- <div class="window">
+            <img src="img/sky-bg.jpg" alt="하늘색하늘" />
+            <div class="window-top">
+                <img src="img/logo.png" alt="윈도우로고" />
+            </div>
+
+            <div class="window-bot">
+                <div class="window-bot-top">
+                    <p>PORTFOLIO.</p>
+                </div>
+                <div class="window-bot-bot">
+                    <p>HEESONG 98</p>
+                </div>
+            </div>
+
+            <div class="bar"><img src="img/booting.gif" alt="윈도우부팅바" /></div>
+        </div> -->
+
+        <div class="background">
+            <div class="b-icon">
+                <div class="back-icon" id="back-icon-1"><a href="#">
+                        <div class="back-img"><img src="img/icon/computer.png" alt="icon-1"></div>
+                        <div class="back-text">
+                            <p>내 정보 보기</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- <div class="back-icon" id="back-icon-4"><a href="#">
+                        <div class="back-img"><img src="img/icon/openfolder.png" alt="icon-4"></div>
+                        <div class="back-text">
+                            <p>프로젝트</p>
+                        </div>
+                    </a>
+                </div> -->
+                <div class="back-icon" id="back-icon-2"><a href="#">
+                        <div class="back-img"><img src="img/icon/folder.png" alt="icon-2"></div>
+                        <div class="back-text">
+                            <p>웹 리뉴얼</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="back-icon" id="back-icon-3"><a href="#">
+                        <div class="back-img"><img src="img/icon/openfolder.png" alt="icon-3"></div>
+                        <div class="back-text">
+                            <p>시각디자인</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <section id="about">
+                <div class="sec-top">
+                    <div class="top-left">
+                        <div class="left-logo"><img src="img/icon/computer.png" alt="컴퓨터아이콘" /></div>
+                        <div class="left-txt">내 정보 보기</div>
+                    </div>
+                    <div class="top-right">
+                        <div class="rigth-bot"><img src="img/sec-header/bot.png" alt="창내렸을때" /></div>
+                        <div class="rigth-mini"><img src="img/sec-header/mini.png" alt="창확대" /></div>
+                        <div class="rigth-close"><img src="img/sec-header/close.png" alt="창닫기" /></div>
+                    </div>
+                </div>
+                <div class="sec-bot" id="sec-bottom">
+                    <div class="about-top">
+                        <div class="about-name">내 정보</div>
+                        <div class="about-contact"><a href="#">쪽지 ㅣ 대화</a>
+                            <div class="in-contact">
+                                <div class="con-wrap">
+                                    <div class="contact">
+                                        <div class="con-img"><img src="img/contact-icon/1-K.png" alt="call" /></div>
+                                        <div class="con-text">
+                                            <p>010.8272.2993</p>
+                                        </div>
+                                    </div>
+                                    <div class="contact">
+                                        <div class="con-img"><img src="img/contact-icon/2-K.png" alt="mail" /></div>
+                                        <div class="con-text">
+                                            <p>o-osong@naver.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="contact">
+                                        <div class="con-img"><img src="img/contact-icon/3-K.png" alt="kakao" /></div>
+                                        <div class="con-text">
+                                            <p>ryhsong</p>
+                                        </div>
+                                    </div>
+                                    <div class="contact">
+                                        <div class="con-img"><img src="img/contact-icon/4-K.png" alt="insta" /></div>
+                                        <div class="con-text">
+                                            <p>heee.song</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-line"></div>
+                    <div class="about-bot">
+                        <div class="about-left">
+                            <div class="about" id="about-1">
+                                <div class="about-txt">이름 :</div>
+                                <div class="about-text" id="name">
+                                    <p>류 희 송</p>
+                                </div>
+                            </div>
+                            <div class="about" id="about-2">
+                                <div class="about-txt">지역 :</div>
+                                <div class="about-text" id="address">
+                                    <p>부산광역시 연제구</p>
+                                </div>
+                                <div class="about-txt" id="bir-txt">생년월일 :</div>
+                                <div class="about-text" id="birth">
+                                    <p>1998년 05월 18일</p>
+                                </div>
+                            </div>
+                            <div class="about" id="about-3">
+                                <div class="about-txt">학력 :</div>
+                                <div class="about-text" id="edu">
+                                    <p>2017년 한국조형예술고등학교(공예과) 졸업</p>
+                                    <p>2020년 부산경상대학교(디자인계열-시각광고디자인) 졸업</p>
+                                </div>
+                            </div>
+                            <div class="about" id="about-4">
+                                <div class="about-txt">스킬 :</div>
+                                <div class="about-text" id="skill">
+                                    <div class="in-skill" id="skill-1">
+                                        <p>포토샵</p>
+                                        <div class="skill-wrap">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                    <div class="in-skill" id="skill-2">
+                                        <p>일러스트</p>
+                                        <div class="skill-wrap">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                    <div class="in-skill" id="skill-3">
+                                        <p>인디자인</p>
+                                        <div class="skill-wrap" id="indesign">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                    <div class="in-skill" id="skill-4">
+                                        <p>프리미어프로</p>
+                                        <div class="skill-wrap" id="pro">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                    <div class="in-skill" id="skill-5">
+                                        <p>에프터이펙트</p>
+                                        <div class="skill-wrap" id="eff">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                    <div class="in-skill" id="skill-6">
+                                        <p>HTML / CSS</p>
+                                        <div class="skill-wrap" id="css">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                    <div class="in-skill" id="skill-7">
+                                        <p>JS</p>
+                                        <div class="skill-wrap" id="js">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-right">
+                            <div class="about-img"><img src="img/face.jpg" alt="사진" /></div>
+                            <div class="about-intro">
+                                <p>보증서</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!--sec-renewal-->
+            <section id="renewal">
+                <div class="sec-top">
+                    <div class="top-left">
+                        <div class="left-logo"><img src="img/icon/folder.png" alt="폴더" /></div>
+                        <div class="left-txt">웹 리뉴얼</div>
+                    </div>
+                    <div class="top-right">
+                        <div class="rigth-bot"><img src="img/sec-header/bot.png" alt="창내렸을때" /></div>
+                        <div class="rigth-mini"><img src="img/sec-header/mini.png" alt="창확대" /></div>
+                        <div class="rigth-close"><img src="img/sec-header/close.png" alt="창닫기" /></div>
+                    </div>
+                </div>
+                <div class="sec-mid">
+                    <div class="mid-left">주 소(D)</div>
+                    <div class="mid-center">
+                        <div class="mid-icon"><img src="img/icon/folder.png" alt="폴더아이콘" /></div>
+                        <div class="mid-text">
+                            <p>바탕화면 > 웹 리뉴얼</p>
+                        </div>
+                        <div class="mid-right"><a href="#">▼</a></div>
+                        <div class="mid-hidden">
+                            <div class="hidden-wrap">
+                                <div class="hidden-icon"><img src="img/icon/folder.png" alt="폴더아이콘" /></div>
+                                <div class="hidden-text" id="hidden-about">
+                                    <p>바탕화면 > 내 정보 보기</p>
+                                </div>
+                            </div>
+                            <div class="hidden-wrap">
+                                <div class="hidden-icon"><img src="img/icon/folder.png" alt="폴더아이콘" /></div>
+                                <div class="hidden-text" id="hidden-visual">
+                                    <p>바탕화면 > 시각 디자인</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec-bot">
+                    <div class="white-bg">
+                        <div class="folder-wrap">
+                            <!-- <div class="folder" id="folder-1">
+                                <div class="folder-img"><img src="img/icon/folder.png" alt="folder" /></div>
+                                <div class="folder-text">뮬라웨어</div>
+                            </div> -->
+                            <div class="folder" id="folder-2">
+                                <div class="folder-img"><img src="img/icon/folder.png" alt="folder" /></div>
+                                <div class="folder-text">에어부산</div>
+                            </div>
+                            <div class="folder" id="folder-3">
+                                <div class="folder-img"><img src="img/icon/folder.png" alt="folder" /></div>
+                                <div class="folder-text">판도라</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!--sec-mula-->
+            <section id="sec-mula">
+                <div class="sec-top">
+                    <div class="top-left">
+                        <div class="left-logo"><img src="img/icon/note.png" alt="노트" /></div>
+                        <div class="left-txt">뮬라웨어</div>
+                    </div>
+                    <div class="top-right">
+                        <div class="rigth-bot"><img src="img/sec-header/bot.png" alt="창내렸을때" /></div>
+                        <div class="rigth-mini"><img src="img/sec-header/mini.png" alt="창확대" /></div>
+                        <div class="rigth-close"><img src="img/sec-header/close.png" alt="창닫기" /></div>
+                    </div>
+                </div>
+                <div class="sec-mid">
+                    <div class="mid-left">주 소(D)</div>
+                    <div class="mid-center">
+                        <div class="mid-icon">
+                            <img src="img/icon/note.png" alt="노트아이콘" />
+                        </div>
+                        <!-- <div class="mid-text">
+                            <p>바탕화면 > 웹 리뉴얼 > 뮬라웨어.txt</p>
+                        </div> -->
+                        <div class="mid-right"><a href="#">▼</a></div>
+                        <div class="mid-hidden">
+                            <div class="hidden-wrap" id="hidden-airbusan-1">
+                                <div class="hidden-icon"><img src="img/icon/note.png" alt="노트아이콘" /></div>
+                                <div class="hidden-text">
+                                    <p>바탕화면 > 웹 리뉴얼 > 에어부산.txt</p>
+                                </div>
+                            </div>
+                            <div class="hidden-wrap" id="hidden-pandora-1">
+                                <div class="hidden-icon"><img src="img/icon/note.png" alt="노트아이콘" /></div>
+                                <div class="hidden-text">
+                                    <p>바탕화면 > 웹 리뉴얼 > 판도라.txt</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec-bot">
+                    <div class="white-bg">
+                        <div class="web-wrap">
+                            <div class="web-img"><img src="img/mockup/mula.jpg" alt="뮬라웨어 목업이미지" /></div>
+                            <div class="web-txt">
+                                <p>"궁극의 편안함으로 애슬레저 업계를 선도하다"</p>
+                                <p>뮬라웨어 비전에 알맞게 홈페이지를 보면서도 편안하게 쇼핑하자라는 느낌이 들게 리뉴얼 하였습니다.</p>
+                            </div>
+                            <div class="web-btn">
+                                <div class="before-btn"><a href="http://www.mulawear.com/index.html" target="_blank">리뉴얼 전</a></div>
+                                <div class="after-btn"><a href="http://summitweb.co.kr/0810/rhs/mula/mula.html" target="_blank">리뉴얼 후</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!--sec-airbusan-->
+            <section id="sec-airbusan">
+                <div class="sec-top">
+                    <div class="top-left">
+                        <div class="left-logo"><img src="img/icon/note.png" alt="노트아이콘" /></div>
+                        <div class="left-txt">에어부산</div>
+                    </div>
+                    <div class="top-right">
+                        <div class="rigth-bot"><img src="img/sec-header/bot.png" alt="창내렸을때" /></div>
+                        <div class="rigth-mini"><img src="img/sec-header/mini.png" alt="창확대" /></div>
+                        <div class="rigth-close"><img src="img/sec-header/close.png" alt="창닫기" /></div>
+                    </div>
+                </div>
+                <div class="sec-mid">
+                    <div class="mid-left">주 소(D)</div>
+                    <div class="mid-center">
+                        <div class="mid-icon">
+                            <img src="img/icon/note.png" alt="노트아이콘" />
+                        </div>
+                        <div class="mid-text">
+                            <p>바탕화면 > 웹 리뉴얼 > 에어부산.txt</p>
+                        </div>
+                        <div class="mid-right"><a href="#">▼</a></div>
+                        <div class="mid-hidden">
+                            <div class="hidden-wrap" id="hidden-mula-1">
+                                <div class="hidden-icon"><img src="img/icon/note.png" alt="노트아이콘" /></div>
+                                <div class="hidden-text">
+                                    <p>바탕화면 > 웹 리뉴얼 > 뮬라웨어.txt</p>
+                                </div>
+                            </div>
+                            <div class="hidden-wrap" id="hidden-pandora-2">
+                                <div class="hidden-icon"><img src="img/icon/note.png" alt="노트아이콘" /></div>
+                                <div class="hidden-text">
+                                    <p>바탕화면 > 웹 리뉴얼 > 판도라.txt</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec-bot">
+                    <div class="white-bg">
+                        <div class="web-wrap">
+                            <div class="web-img"><img src="img/mockup/air.jpg" alt="에어부산 목업이미지" /></div>
+                            <div class="web-txt">
+                                <p>"대한민국의 남부지역을 기반으로 하는 지역항공사로 출범하였습니다"</p>
+                                <p>남부지역의 바닷가 느낌을 주기 위하여 파란계열을 이용하여 리뉴얼 하였습니다.</p>
+                            </div>
+                            <div class="web-btn">
+                                <div class="before-btn"><a href="https://www.airbusan.com/content/individual/?" target="_blank">리뉴얼 전</a></div>
+                                <div class="after-btn"><a href="http://summitweb.co.kr/0810/rhs/airbusan/airbusan.html" target="_blank">리뉴얼 후</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!--sec-pandor-->
+            <section id="sec-pandora">
+                <div class="sec-top">
+                    <div class="top-left">
+                        <div class="left-logo"><img src="img/icon/note.png" alt="노트아이콘" /></div>
+                        <div class="left-txt">판도라</div>
+                    </div>
+                    <div class="top-right">
+                        <div class="rigth-bot"><img src="img/sec-header/bot.png" alt="창내렸을때" /></div>
+                        <div class="rigth-mini"><img src="img/sec-header/mini.png" alt="창확대" /></div>
+                        <div class="rigth-close"><img src="img/sec-header/close.png" alt="창닫기" /></div>
+                    </div>
+                </div>
+                <div class="sec-mid">
+                    <div class="mid-left">주 소(D)</div>
+                    <div class="mid-center">
+                        <div class="mid-icon">
+                            <img src="img/icon/note.png" alt="노트아이콘" />
+                        </div>
+                        <div class="mid-text">
+                            <p>바탕화면 > 웹 리뉴얼 > 판도라.txt</p>
+                        </div>
+                        <div class="mid-right"><a href="#">▼</a></div>
+                        <div class="mid-hidden">
+                            <div class="hidden-wrap" id="hidden-mula-2">
+                                <div class="hidden-icon"><img src="img/icon/note.png" alt="노트아이콘" /></div>
+                                <!-- <div class="hidden-text">
+                                    <p>바탕화면 > 웹 리뉴얼 > 뮬라웨어.txt</p>
+                                </div> -->
+                            </div>
+                            <div class="hidden-wrap" id="hidden-airbusan-2">
+                                <div class="hidden-icon"><img src="img/icon/note.png" alt="노트아이콘" /></div>
+                                <div class="hidden-text">
+                                    <p>바탕화면 > 웹 리뉴얼 > 에어부산.txt</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec-bot">
+                    <div class="white-bg">
+                        <div class="web-wrap">
+                            <div class="web-img"><img src="img/mockup/pandora.jpg" alt="판도라 목업이미지" /></div>
+                            <div class="web-txt">
+                                <p>"좋은 품질, 모던한 디자인의 진정한 주얼리를 합리적인 가격에 제공하자"</p>
+                                <p>판도라의 "모던한"의 이미지와 걸맞게 심플하게 리뉴얼하였습니다.</p>
+                            </div>
+                            <div class="web-btn">
+                                <div class="before-btn"><a href="https://www.pandora.net/ko-kr" target="_blank">리뉴얼 전</a></div>
+                                <div class="after-btn"><a href="http://summitweb.co.kr/0810/rhs/pandora/pandora.html" target="_blank">리뉴얼 후</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!--sec-visual-->
+            <section id="visual">
+                <div class="sec-top">
+                    <div class="top-left">
+                        <div class="left-logo"><img src="img/icon/openfolder.png" alt="오픈폴더" /></div>
+                        <div class="left-txt">시각 디자인</div>
+                    </div>
+                    <div class="top-right">
+                        <div class="rigth-bot"><img src="img/sec-header/bot.png" alt="창내렸을때" /></div>
+                        <div class="rigth-mini"><img src="img/sec-header/mini.png" alt="창확대" /></div>
+                        <div class="rigth-close"><img src="img/sec-header/close.png" alt="창닫기" /></div>
+                    </div>
+                </div>
+                <div class="sec-mid">
+                    <div class="mid-left">주 소(D)</div>
+                    <div class="mid-center">
+                        <div class="mid-icon"><img src="img/icon/openfolder.png" alt="열린폴더아이콘" /></div>
+                        <div class="mid-text">
+                            <p>바탕화면 > 시각 디자인</p>
+                        </div>
+                        <div class="mid-right"><a href="#">▼</a></div>
+                        <div class="mid-hidden">
+                            <div class="hidden-wrap" id="hidden-about-2">
+                                <div class="hidden-icon"><img src="img/icon/openfolder.png" alt="열린폴더아이콘" /></div>
+                                <div class="hidden-text">
+                                    <p>바탕화면 > 내 정보 보기</p>
+                                </div>
+                            </div>
+                            <div class="hidden-wrap" id="hidden-renewal">
+                                <div class="hidden-icon"><img src="img/icon/openfolder.png" alt="열린폴더아이콘" /></div>
+                                <div class="hidden-text">
+                                    <p>바탕화면 > 웹 리뉴얼</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec-bot" id="bot-bot">
+                    <div class="left-bg">
+                        <div>
+                            <div class="visual-con-wrap">
+                                <div class="visual-con" id="visual-con-1">
+                                    <div class="con-name" id="top-con-name">
+                                        <p>이름</p>
+                                    </div>
+                                    <div class="con-day" id="top-con-day">
+                                        <p>날짜,참여도</p>
+                                    </div>
+                                    <div class="con-type" id="top-con-type">
+                                        <p>유형</p>
+                                    </div>
+                                    <div class="con-tag" id="top-con-tag">
+                                        <p>태그</p>
+                                    </div>
+                                </div>
+
+                                <div class="visual-con" id="visual-con-2">
+                                    <div class="con-name">
+                                        <div class="vi-img"><img src="img/icon/note.png" alt="note-icon" /></div>
+                                        <p>포스터 디자인 1</p>
+                                    </div>
+                                    <div class="con-day">
+                                        <p>2일,100%</p>
+                                    </div>
+                                    <div class="con-type">
+                                        <p>Indesign</p>
+                                    </div>
+                                    <div class="con-tag">
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                                <div class="visual-con" id="visual-con-3">
+                                    <div class="con-name">
+                                        <div class="vi-img"><img src="img/icon/note.png" alt="note-icon" /></div>
+                                        <p>포스터 디자인 2</p>
+                                    </div>
+                                    <div class="con-day">
+                                        <p>2일,100%</p>
+                                    </div>
+                                    <div class="con-type">
+                                        <p>Indesign</p>
+                                    </div>
+                                    <div class="con-tag">
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                                <div class="visual-con" id="visual-con-4">
+                                    <div class="con-name">
+                                        <div class="vi-img"><img src="img/icon/note.png" alt="note-icon" /></div>
+                                        <p>과제전 포스터</p>
+                                    </div>
+                                    <div class="con-day">
+                                        <p>1일,100%</p>
+                                    </div>
+                                    <div class="con-type">
+                                        <p>Indesign</p>
+                                    </div>
+                                    <div class="con-tag">
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                                <div class="visual-con" id="visual-con-5">
+                                    <div class="con-name">
+                                        <div class="vi-img"><img src="img/icon/note.png" alt="note-icon" /></div>
+                                        <p>키엘 리플렛</p>
+                                    </div>
+                                    <div class="con-day">
+                                        <p>3일,100%</p>
+                                    </div>
+                                    <div class="con-type">
+                                        <p>Illustrator</p>
+                                    </div>
+                                    <div class="con-tag">
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                                <div class="visual-con" id="visual-con-6">
+                                    <div class="con-name">
+                                        <div class="vi-img"><img src="img/icon/note.png" alt="note-icon" /></div>
+                                        <p>베스킨라빈스 리플렛</p>
+                                    </div>
+                                    <div class="con-day">
+                                        <p>2일,100%</p>
+                                    </div>
+                                    <div class="con-type">
+                                        <p>Illustrator,Photoshap</p>
+                                    </div>
+                                    <div class="con-tag">
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                                <div class="visual-con" id="visual-con-7">
+                                    <div class="con-name">
+                                        <div class="vi-img"><img src="img/icon/note.png" alt="note-icon" /></div>
+                                        <p>코인노래방 간판</p>
+                                    </div>
+                                    <div class="con-day">
+                                        <p>7일,100%</p>
+                                    </div>
+                                    <div class="con-type">
+                                        <p>Illustrator,Photoshap</p>
+                                    </div>
+                                    <div class="con-tag">
+                                        <p>부산옥외광고대전 장려</p>
+                                    </div>
+                                </div>
+
+                                <div class="visual-con" id="visual-con-8">
+                                    <div class="con-name">
+                                        <div class="vi-img"><img src="img/icon/note.png" alt="note-icon" /></div>
+                                        <p>텍스타일 디자인</p>
+                                    </div>
+                                    <div class="con-day">
+                                        <p>6일,100%</p>
+                                    </div>
+                                    <div class="con-type">
+                                        <p>Illustrator,Photoshap</p>
+                                    </div>
+                                    <div class="con-tag">
+                                        <p>부산텍스타일디자인대전 특선</p>
+                                    </div>
+                                </div>
+
+                                <div class="visual-con" id="visual-con-9">
+                                    <div class="con-name">
+                                        <div class="vi-img"><img src="img/icon/note.png" alt="note-icon" /></div>
+                                        <p>사과상자 패키지</p>
+                                    </div>
+                                    <div class="con-day">
+                                        <p>3일,100%</p>
+                                    </div>
+                                    <div class="con-type">
+                                        <p>Indesign</p>
+                                    </div>
+                                    <div class="con-tag">
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                                <div class="visual-con" id="visual-con-10">
+                                    <div class="con-name">
+                                        <div class="vi-img"><img src="img/icon/note.png" alt="note-icon" /></div>
+                                        <p>소방안전 포스터</p>
+                                    </div>
+                                    <div class="con-day">
+                                        <p>5일,100%</p>
+                                    </div>
+                                    <div class="con-type">
+                                        <p>Illustrator</p>
+                                    </div>
+                                    <div class="con-tag">
+                                        <p>소방안전포스터 입선</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-bg">
+                        <div class="view-top">
+                            <p>미리보기</p>
+                        </div>
+                        <div class="view-bot">
+                            <div class="view-wrap" id="view-1">
+                                <div class="view-img"><img src="img/visual/p-1.png" alt="포스터1" /></div>
+                                <div class="view-text">
+                                    <p></p>
+                                    <p></p>
+                                </div>
+                                <!--<div class="view-btn"><a href="#" target="_blank"><p>크게보기</p></a></div>-->
+                            </div>
+
+                            <div class="view-wrap" id="view-2">
+                                <div class="view-img"><img src="img/visual/p-2.png" alt="포스터2" /></div>
+                                <div class="view-text">
+                                    <p></p>
+                                    <p></p>
+                                </div>
+                                <!--<div class="view-btn"><a href="#">크게보기</a></div>-->
+                            </div>
+
+                            <div class="view-wrap" id="view-3">
+                                <div class="view-img"><img src="img/visual/p-3.png" alt="과제전 포스터" /></div>
+                                <div class="view-text">
+                                    <p></p>
+                                    <p></p>
+                                </div>
+                                <!--<div class="view-btn"><a href="#">크게보기</a></div>-->
+                            </div>
+
+                            <div class="view-wrap" id="view-4">
+                                <div class="view-img"><img src="img/visual/kiel.jpg" alt="키엘리플렛" /></div>
+                                <div class="view-text">
+                                    <p></p>
+                                    <p></p>
+                                </div>
+                                <!--<div class="view-btn"><a href="#">크게보기</a></div>-->
+                            </div>
+
+                            <div class="view-wrap" id="view-5">
+                                <div class="view-img"><img src="img/visual/br31.jpg" alt="베스킨라빈스리플렛" /></div>
+                                <div class="view-text">
+                                    <p></p>
+                                    <p></p>
+                                </div>
+                                <!--<div class="view-btn"><a href="#">크게보기</a></div>-->
+                            </div>
+
+                            <div class="view-wrap" id="view-6">
+                                <div class="view-img"><img src="img/visual/coin.jpg" alt="코인노래방간판" /></div>
+                                <div class="view-text">
+                                    <p></p>
+                                    <p></p>
+                                </div>
+                                <!--<div class="view-btn"><a href="#">크게보기</a></div>-->
+                            </div>
+
+                            <div class="view-wrap" id="view-7">
+                                <div class="view-img" id="view-7-img"><img src="img/visual/tex.png" alt="텍스타일디자인" /></div>
+                                <div class="view-text">
+                                    <p></p>
+                                    <p></p>
+                                </div>
+                                <!--<div class="view-btn"><a href="#">크게보기</a></div>-->
+                            </div>
+
+                            <div class="view-wrap" id="view-8">
+                                <div class="view-img" id="view-8-img"><img src="img/visual/apple.png" alt="사과상자패키지" /></div>
+                                <div class="view-text">
+                                    <p></p>
+                                    <p></p>
+                                </div>
+                                <!--<div class="view-btn"><a href="#">크게보기</a></div>-->
+                            </div>
+
+                            <div class="view-wrap" id="view-9">
+                                <div class="view-img" id="view-9-img"><img src="img/visual/119.jpg" alt="소방안전포스터" /></div>
+                                <div class="view-text">
+                                    <p></p>
+                                    <p></p>
+                                </div>
+                                <!--<div class="view-btn"><a href="#">크게보기</a></div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!--shupdown-->
+            <div class="down">
+                <div class="down-top">
+                    <div class="down-left">
+                        <div class="down-icon"><img src="img/icon/108.ico" alt="시스템종료 아이콘" /></div>
+                        <div class="down-txt">컴퓨터 종료</div>
+                    </div>
+                </div>
+                <div class="down-bot">
+                    <div class="down-text">시스템을 종료하시겠습니까 ?</div>
+                    <div class="down-btn-wrap">
+                        <div class="down-btn" id="yes">
+                            <p><a href="#">네 (Yes)</a></p>
+                        </div>
+                        <div class="down-btn" id="no">
+                            <p><a href="#">아니요 (No)</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <!--bot start-->
+            <div class="bot">
+                <div class="start">
+                    <div class="start-icon"><img src="img/start-logo.png" alt="윈도우아이콘" /></div>
+                    <div class="start-text">
+                        <p>시 작</p>
+                    </div>
+                    <div class="start-menu">
+                        <div class="start-left">
+                            <p>HEESONG98</p>
+                        </div>
+                        <div class="start-right">
+                            <div class="in-menu" id="in-menu-1">
+                                <div class="menu-icon"><img src="img/icon/computer.png" alt="icon" /></div>
+                                <p class="p-4"><a href="#">내 정보 보기</a></p>
+                            </div>
+                            <div class="in-menu" id="web-renewal">
+                                <div class="menu-icon"><img src="img/icon/folder.png" alt="icon" /></div>
+                                <p><a href="#">웹 리뉴얼</a></p>
+                                <div class="hover-menu" id="hover-menu-1">
+                                    <p><a href="#">▶</a></p>
+                                </div>
+                                <ul class="sub-menu" id="sub-menu-1">
+                                    <!-- <li id="web-renewal-1"><a href="#">
+                                            <div class="sub-img"><img src="img/icon/note.png" alt="note" /></div>
+                                            <p class="p-1">뮬라웨어</p>
+                                        </a></li> -->
+                                    <li id="web-renewal-2"><a href="#">
+                                            <div class="sub-img"><img src="img/icon/note.png" alt="note" /></div>
+                                            <p class="p-2">에어부산</p>
+                                        </a></li>
+                                    <li id="web-renewal-3"><a href="#">
+                                            <div class="sub-img"><img src="img/icon/note.png" alt="note" /></div>
+                                            <p class="p-3">판도라</p>
+                                        </a></li>
+                                </ul>
+                            </div>
+                            <div class="in-menu" id="visual-design">
+                                <div class="menu-icon"><img src="img/icon/folder.png" alt="icon" /></div>
+                                <p><a href="#">시각 디자인</a></p>
+                            </div>
+                            <div class="in-menu" id="in-menu-4">
+                                <div class="menu-icon"><img src="img/icon/key.ico" alt="icon" /></div>
+                                <p class="p-5"><a href="#">보증서</a></p>
+                            </div>
+                            <div class="in-menu" id="in-menu-5">
+                                <div class="menu-icon"><img src="img/icon/108.ico" alt="icon" /></div>
+                                <p class="p-6"><a href="#">컴퓨터 종료</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bot-right">
+                    <div id="divClock" class="clock"></div>
+                </div>
+            </div>
+
+
+        </div>
+        <!--background end-->
+
+
+        <!--sec-end-->
+        <div id="end">
+            <img src="img/sky-bg.jpg" alt="sky" />
+            <div class="back-btn">
+                <p><a href="#">←</a></p>
+            </div>
+            <div class="end-top">
+                <p>CONTACT</p>
+            </div>
+            <div class="end-mid-wrap">
+                <div class="end-mid">
+                    <div class="end-img"><img src="img/contact-icon/1-R.png" alt="call" /></div>
+                    <div class="end-text">
+                        <p>010.8272.2993</p>
+                    </div>
+                </div>
+                <div class="end-mid">
+                    <div class="end-img"><img src="img/contact-icon/2-R.png" alt="mail" /></div>
+                    <div class="end-text">
+                        <p>o-osong@naver.com</p>
+                    </div>
+                </div>
+                <div class="end-mid">
+                    <div class="end-img"><img src="img/contact-icon/3-R.png" alt="kakao" /></div>
+                    <div class="end-text">
+                        <p>ryhsong</p>
+                    </div>
+                </div>
+                <div class="end-mid">
+                    <div class="end-img"><img src="img/contact-icon/4-R.png" alt="insta" /></div>
+                    <div class="end-text">
+                        <p>heee.song</p>
+                    </div>
+                </div>
+            </div>
+            <div class="end-bot">
+                <div class="end-bot-mid">
+                    <p>HEESONG 98</p>
+                </div>
+                <div class="end-bot-top">
+                    <img src="img/ending.gif" alt="시스템을종료하는중입니다..."/>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!--wrap end-->
+
+</body>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/booting.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/hover.js"></script>
+<script src="js/click.js"></script>
+
+</html>
